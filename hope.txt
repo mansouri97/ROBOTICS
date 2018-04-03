@@ -1,0 +1,62 @@
+it gave me a lot of hope an energy to even learn more and get things more complicated,i have always watched videos about this course but they were never taught so proficiently and that's the thing  that makes you eager for more and more.to be encountered with your team mates and your professor
+and get reviews and even some of the brilliant ideas and how to fix yourself and make your done in the best way possible that is priceless,so this this course has given me the keys to open a lot of closed doors and see whats hidden behind them to begin my adventure thank you coursera for this opprotunity.
+code is very simple reading a string from serial converting it to char array then strtok to divide that char array and save it to different variables add and val in the while loop then transforming those two strings add and val into integers and use them in the read write process 
+
+#include <EEPROM.h>
+int b,i,address,value,memval;
+String input="",add="",val="";
+char wr[17];
+
+
+void setup()
+{ 
+  Serial.begin(9600);
+
+}
+
+
+void loop() {  
+
+while(Serial.available()){
+  
+  
+  input=Serial.readString();
+  b=input.length();
+//Serial.print(b);
+//Serial.print("\n");
+
+  input.toCharArray(wr, b+1);
+
+  char *token =strtok(wr, " ");
+  i=0;
+  while(token != NULL)
+    {
+     i++;
+     token = strtok(NULL, " ");
+     if (i==1) add=token; 
+     if (i==2) val=token;
+    }
+
+  address=add.toInt();
+  value=val.toInt(); 
+
+
+if (wr[0]=='w') { EEPROM.write(address, value); Serial.print("---value is saved---");Serial.print("\n");}
+if (wr[0]=='r') { memval = EEPROM.read(address);Serial.print(" value : ");Serial.print(memval);Serial.print("\n");}
+
+}
+
+} 
+nowadays we do not have to manually control our houses functions we just simply let the net and the intelligent part do the job for us
+cause it will be done faster and with no problems .
+so lets say you want to go out and you dont know how the weather will change you simply ask for the weather and its stability and it will come up to you with something to wear for example and this the best thing that it use intelligence and network  you cant do this in the basic version  you need to go out say you find it sunny wear a t shirt and go out suddenly it becomes rainy and you get flu .so here we can even find that it protects your health . 
+
+
+in the smart iot house and his improvements are basically everything that it does is new and in a very intelligent way , but the one and most important thing is the interaction with humans and that type of feedback that you get ween interfacing with it.
+you get all sort of notifications,alerts,info  wich are talking to you in a very simple and easy understandable way 
+
+
+the privacy issues are that data that is being sent to the cloud in order to get processed now the problem is any hacker can access that data  depends on your data-collecting agency and perform a some sort of an attack based on that info(accessing my bank accounts,accessing my home cameras and spying on me ,or even  putting a virus in my system and make it go crazy)  .but in the original form this data was only saved in your mind so you don't need to worry about it .  
+now about the price in order to make your house smarter  it will cost you about 15$ or above 1000$ 
+
+

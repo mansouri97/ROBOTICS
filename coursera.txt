@@ -1,0 +1,63 @@
+I'm trying to make an iot project and i didn't learn any thing from going the the college
+so i chose to be a self learner and i want to be data scientist so this course is my best start and introduction for embedded system developer or every computer scientist . 
+and this course exactly have a broad introduction to iot, internet,internet protocols,mantes and embedded system all what i want to learn for my dream job . 
+besides i have a great passion with eletronics and i make great stuff with and i wnat to develop miself even more and this is the path  that i want to take 
+
+another thing that make the course great that  is Taught byIan Harris and created by the University of California
+
+an other  thing that oncourage me to enroll in this course is the  review . it is my first time i see 4.6 starts of 5  . It means that every thing in the course is valuable and easy to learn
+
+
+
+I'm allaying for financial aid for many reasons 
+first of all in my country  Tunisia we have not  any payment method yet the government closed paypal , payoner  , payza and all the other payment methods  so there is no way to pay only for cash .
+second i'm still student and haven't money  yet  i want to learn the skills to get money in the future  .
+so the only way is to apply for the financial aid.
+
+I don't realy have money to afford to join to word universities .
+
+the financial aid will help me to get the certificate to add it to my cv , in tunisia  certificates makes the finding of the job esier and the certificate is from coursera that is the best thing .
+
+finaly i want to say that i don't have the choise because i need the financial aid to improve my skills , to comunicate with others and to get the certificate
+
+
+
+
+
+
+
+#include<stdio.h>
+
+void main()
+{
+    int a, b, c, i;
+    a=0;b=1;
+    c=0;i=0;
+    while(c<5)
+    {
+      if(i==0) printf("%d %d ",a,b);
+      i=1;
+      c=a+b;
+      a=b;
+      b=c;
+      printf("%d ",c);
+    }
+
+}
+
+
+if (wr[0]=='w') 
+  for(i=6;i<b;i++)
+    {
+      Serial.print(wr[i]);Serial.print("\n");
+      if (wr[i]==' ') 
+    } 
+
+//Serial.print(addr);
+
+
+//addr=(((wr[i]).toInt())*10)+addr;
+//for(i=0; i < b; i++)
+//{
+//  Serial.println(wr[i]);
+//}
