@@ -1,13 +1,13 @@
 import turtle
 from tkinter import *
-print("                nfc 15 100 builder V1.0\n")
+print("             nfc 15 100 builder V1.0\n")
 print("répondez à ces questions S'il vous plaît :)\n")
 while True: 
  try:
     in1= int(input("nombre des lampes dans votre maison : "))
     
  except ValueError:
-    print("Not an integer! Try again.")
+    print("donner un entier!")
     #continue
  else:
      break
@@ -16,16 +16,16 @@ while True:
     in2=int(input("nombre des prises dans votre maison : "))
     
  except ValueError:
-    print("Not an integer! Try again.")
+    print("donner un entier!")
     #continue
  else:
      break
 while True:
  try:
-    fox=int(input("nombre des circuit special : "))
+    fox=int(input("nombre des circuit special ex :\n(-lave linge\n -lave vaisselle\n -sèche linge\n -four indépendant\n -chaudière\n -volets roulants électriques\n -climatisation): "))
     
  except ValueError:
-    print("Not an integer! Try again.")
+    print("donner un entier!")
     #continue
  else:
      break  
@@ -35,7 +35,7 @@ while True:
     saf=int(input("plaque de cuisson 1 ou 0 : "))
     
  except ValueError:
-    print("Not an integer! Try again.")
+    print("donner un entier!")
     #continue
  else:
      break
@@ -43,7 +43,7 @@ while True:
 print("le shema d'appareillage et d'instalation est le suivant   ")
 root=Tk()
 root.geometry('1280x720-5+40') #added by me
-cv = turtle.ScrolledCanvas(root, width=1280, height=720)
+cv = turtle.ScrolledCanvas(root)
 cv.pack()
 
 screen = turtle.TurtleScreen(cv)
@@ -79,7 +79,7 @@ def eclairage():
  t.left(90)
  t.pu()
  t.forward(10)
- t.write("10")
+ t.write("16A")
  t.right(180)
  t.forward(10)
  t.pd()
@@ -108,7 +108,7 @@ def courant():
  t.left(90)
  t.pu()
  t.forward(10)
- t.write("16")
+ t.write("20A")
  t.right(180)
  t.forward(10)
  t.pd()
@@ -139,7 +139,7 @@ def hcourant():
  t.left(90)
  t.pu()
  t.forward(10)
- t.write("20")
+ t.write("20A")
  t.right(180)
  t.forward(10)
  t.pd()
@@ -171,7 +171,7 @@ def uhcourant():
  t.left(90)
  t.pu()
  t.forward(10)
- t.write("32")
+ t.write("32A")
  t.right(180)
  t.forward(10)
  t.pd()
@@ -377,9 +377,9 @@ for i in range (0,saf):
     f=f+56
     pria=prib=0
 t.pu()
-t.goto(0,80)
+t.goto(0,110)
 t.pd()
-t.write("           NFC BUILDER V1.0\n-cette une schema de votre appareillage necessaire pour l'instalation tel que:\n *le nombre et calibre des disjoncteurs\n *les interupteurs \n *les prises de courant \n-NB q'il faut des ddf pour assurer votre protection contre les choc electrique qui ne sont pas afficher\n il faut un minimum 2 ddf pour assurer une bonne selectivite et aussi il faut ajouter un raccordement a la terre  ")
-
+t.write( "                       NFC BUILDER V1.0(connaitre votre appareillage)\n-votre installation électrique a besoin au moins de :\n - "+str(e)+" disjoncteurs16A (eclairage),section des fil est de 1.5mm²\n - "+str(p+fox)+" disjoncteurs20A (prise et circuit speciales),section des fil est de 2.5mm²\n - "+str(saf)+" disjoncteurs32A (p de cuisson),section des fil est de 6mm²", font=("Arial", 15, "normal"))
+ #NFC BUILDER V1.0\n-cette une schema de votre appareillage necessaire pour l'instalation tel que:\n *le nombre et calibre des disjoncteurs\n *les interupteurs \n *les prises de courant \n-NB q'il faut des ddf pour assurer votre protection contre les choc electrique qui ne sont pas afficher\n il faut un minimum 2 ddf pour assurer une bonne selectivite et aussi il faut ajouter un raccordement a la terre  
 
 root.mainloop()
