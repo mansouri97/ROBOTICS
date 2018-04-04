@@ -1,5 +1,6 @@
 import turtle
 from tkinter import *
+
 print("             nfc 15 100 builder V1.0\n")
 print("répondez à ces questions S'il vous plaît :)\n")
 while True: 
@@ -42,25 +43,31 @@ while True:
 
 print("le shema d'appareillage et d'instalation est le suivant   ")
 root=Tk()
-root.geometry('1280x720-5+40') #added by me
-cv = turtle.ScrolledCanvas(root)
+wid= root.winfo_screenwidth()
+hei= root.winfo_screenheight()
+
+
+root.geometry('800x800-5+40') #added by me
+
+cv = turtle.ScrolledCanvas(root,width=wid,height=hei)
 cv.pack()
 
 screen = turtle.TurtleScreen(cv)
-screen.screensize(2000,1500) #added by me
+screen.screensize(4500,1500) #added by me
 
 
 t = turtle.RawTurtle(screen)
 
 
+
 t.speed(0)
 t.color("red")
-t.forward(500)
+t.forward(700)
 t.color("blue")
 t.pu()
 t.goto(20,-5)
 t.pd()
-t.forward(500)
+t.forward(700)
 t.pu()
 t.goto(0,0)
 t.pd()
@@ -379,7 +386,7 @@ for i in range (0,saf):
 t.pu()
 t.goto(0,110)
 t.pd()
-t.write( "                       NFC BUILDER V1.0(connaitre votre appareillage)\n-votre installation électrique a besoin au moins de :\n - "+str(e)+" disjoncteurs16A (eclairage),section des fil est de 1.5mm²\n - "+str(p+fox)+" disjoncteurs20A (prise et circuit speciales),section des fil est de 2.5mm²\n - "+str(saf)+" disjoncteurs32A (p de cuisson),section des fil est de 6mm²", font=("Arial", 15, "normal"))
- #NFC BUILDER V1.0\n-cette une schema de votre appareillage necessaire pour l'instalation tel que:\n *le nombre et calibre des disjoncteurs\n *les interupteurs \n *les prises de courant \n-NB q'il faut des ddf pour assurer votre protection contre les choc electrique qui ne sont pas afficher\n il faut un minimum 2 ddf pour assurer une bonne selectivite et aussi il faut ajouter un raccordement a la terre  
+t.write( "                       NFC BUILDER V1.0[connaître votre appareillage]\n-votre installation électrique a besoin au moins de :\n - "+str(e)+" disjoncteurs16A (eclairage),section des fil est de 1.5mm²\n - "+str(p+fox)+" disjoncteurs20A (prise et circuit speciales),section des fil est de 2.5mm²\n - "+str(saf)+" disjoncteurs32A (p de cuisson),section des fil est de 6mm²\n- ce n'est pas montré dans le schéma mais un disjoncteur principal et 2 disjoncteurs différentiels sont nécessaire pour assurer une bonne selectivite et pour votre protection\n\n\n le schéma :", font=("Arial", 15, "normal"))
+#NFC BUILDER V1.0\n-cette une schema de votre appareillage necessaire pour l'instalation tel que:\n *le nombre et calibre des disjoncteurs\n *les interupteurs \n *les prises de courant \n-NB q'il faut des ddf pour assurer votre protection contre les choc electrique qui ne sont pas afficher\n il faut un minimum 2 ddf pour assurer une bonne selectivite et aussi il faut ajouter un raccordement a la terre  
 
 root.mainloop()
