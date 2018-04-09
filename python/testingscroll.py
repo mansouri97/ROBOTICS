@@ -42,6 +42,7 @@ while True:
      break
 
 print("le shema d'appareillage et d'instalation est le suivant   ")
+
 root=Tk()
 wid= root.winfo_screenwidth()
 hei= root.winfo_screenheight()
@@ -134,34 +135,7 @@ def courant():
 
 
 
-def hcourant():
- t.color("black")
- 
- t.right(90)
- t.forward(20)
- t.right(90)
- t.forward(8)
- t.left(90)
- t.forward(30)
- t.left(90)
- t.pu()
- t.forward(10)
- t.write("20A")
- t.right(180)
- t.forward(10)
- t.pd()
- t.left(90)
- t.forward(30)
- t.left(90)
- t.forward(40)
- t.left(90)
- t.forward(60)
- t.left(90)
- t.forward(32)
- t.right(180)
- t.forward(24)
- t.left(90)
- t.forward(15)
+
 
 
 
@@ -309,7 +283,7 @@ for i in range(0,p):
   t.pd()
 
 for i in range(0,fox):
-  hcourant()
+  courant()
   t.pu()
   a=a+80
   t.goto(a,0)
@@ -388,5 +362,5 @@ t.goto(0,110)
 t.pd()
 t.write( "                       NFC BUILDER V1.0[connaître votre appareillage]\n-votre installation électrique a besoin au moins de :\n - "+str(e)+" disjoncteurs16A (eclairage),section des fil est de 1.5mm²\n - "+str(p+fox)+" disjoncteurs20A (prise et circuit speciales),section des fil est de 2.5mm²\n - "+str(saf)+" disjoncteurs32A (p de cuisson),section des fil est de 6mm²\n- ce n'est pas montré dans le schéma mais un disjoncteur principal et 2 disjoncteurs différentiels sont nécessaire pour assurer une bonne selectivite et pour votre protection\n\n\n le schéma :", font=("Arial", 15, "normal"))
 #NFC BUILDER V1.0\n-cette une schema de votre appareillage necessaire pour l'instalation tel que:\n *le nombre et calibre des disjoncteurs\n *les interupteurs \n *les prises de courant \n-NB q'il faut des ddf pour assurer votre protection contre les choc electrique qui ne sont pas afficher\n il faut un minimum 2 ddf pour assurer une bonne selectivite et aussi il faut ajouter un raccordement a la terre  
-
 root.mainloop()
+
